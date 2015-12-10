@@ -1,8 +1,9 @@
 # UI Methods
 Sometimes, is easier to apply best practices if we have a method to do so. This document will try to consolidate a set of development methods to create web applications with many of the best practices recommended by the community.
 
-## Why learning a method?
-Explain motivations
+## Why?
+The [Merrian-Webster dictionary](http://beta.merriam-webster.com/dictionary/method) defines a method as *"a way, technique, or process of or for doing something"*. There are many activities that can be performed with a more predictable quality if we follow a method. Is easier to understand the various metrics yielded by a profiler if we have a method or model to do so, than if we try to navigate across all the information we get. 
+The following sections will provide links and a little bit of information for each of the methods I know for frontend development.
 
 ## Accessibility
 
