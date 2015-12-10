@@ -46,3 +46,6 @@ http://suitcss.github.io/
 ### RAIL
 http://www.smashingmagazine.com/2015/10/rail-user-centric-model-performance/
 https://aerotwist.com/blog/bigrig/
+
+### FLIP
+https://aerotwist.com/blog/flip-your-animations/
