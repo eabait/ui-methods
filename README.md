@@ -20,8 +20,28 @@ HIKE is an acronym to help you remember some basic principles of web accessibili
 **E** asks for you to ACT with a little extra love for custom components and more. 
 http://accessibility.parseapp.com/#1
 
-## CSS
+## Style Guides
+
+### Atomic Design
+http://patternlab.io/about.html
+
+## CSS Organization
 
 ### BEM
 http://getbem.com/introduction/
 
+### OOCSS
+https://github.com/stubbornella/oocss
+http://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/
+
+### SMACSS
+https://smacss.com/
+
+### SUIT CSS
+http://suitcss.github.io/
+
+## Web Performance
+
+### RAIL
+http://www.smashingmagazine.com/2015/10/rail-user-centric-model-performance/
+https://aerotwist.com/blog/bigrig/
