@@ -23,8 +23,14 @@ http://accessibility.parseapp.com/#1
 
 ## Style Guides
 
-### Atomic Design
-http://patternlab.io/about.html
+### Atomic Design [http://patternlab.io/about.html](http://patternlab.io/about.html)
+*Atomic design is a methodology composed of five distinct stages working together to create deliberate interface design systems.* ([http://atomicdesign.bradfrost.com/chapter-2/](http://atomicdesign.bradfrost.com/chapter-2/)).
+
+* **Atoms**: are the basic building blocks of matter. Like HTML tags, such as a form label, an input or a button.
+* **Molecules**: are groups of atoms bonded together and are the smallest fundamental units of a compound. These molecules take on their own properties and serve as the backbone of our design systems.
+* **Organisms**: are groups of molecules joined together to form a relatively complex, distinct section of an interface.
+* **Templates**: at the template stage, we break our chemistry analogy to get into language that makes more sense to our clients and our final output. Provide context!
+* **Pages**: are template instances.
 
 ## CSS Organization
 
