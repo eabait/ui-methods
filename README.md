@@ -34,9 +34,14 @@ http://accessibility.parseapp.com/#1
 * **Pages**: are template instances.
 
 ## CSS Organization
+Move away from monolithic CSS files. The goal of this section is to provide methods to modularise the CSS into multiple files, making it more mainteinable and reusable. The key is to identify you UI components, as suggested in the Style Guide section, and enforce their implementation in CSS following one or more of the methods.
 
-### BEM
-http://getbem.com/introduction/
+### BEM [http://getbem.com](http://getbem.com)
+BEM main strength is to provide a common ground for naming CSS classes. Using proper naming will prepare you for the changes in design of the website. BEM is abbreviation of the key elements of the methodology — *Block*, *Element* and *Modifier*.
+
+* **Block**: encapsulates a standalone entity that is meaningful on its own. While blocks can be nested and interact with each other, semantically they remain equal; there is no precedence or hierarchy. Holistic entities without DOM representation (such as controllers or models) can be blocks as well. Block names may consist of Latin letters, digits, and dashes. To form a CSS class, add a short prefix for namespacing: .block
+* **Element**: parts of a block and have no standalone meaning. Any element is semantically tied to its block. Element names may consist of Latin letters, digits, dashes and underscores. CSS class is formed as block name plus two underscores plus element name: .block__elem
+* **Modifier**: flags on blocks or elements. Use them to change appearance, behavior or state. Modifier names may consist of Latin letters, digits, dashes and underscores. CSS class is formed as block’s or element’s name plus two dashes: .block--mod or .block__mod--mod and .block--color-black with .block--color-red. Spaces in complicated modifiers are replaced by dash.
 
 ### OOCSS
 https://github.com/stubbornella/oocss
