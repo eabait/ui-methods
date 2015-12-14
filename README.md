@@ -63,9 +63,13 @@ There are five types of categories:
 
 ## Web Performance
 
-### RAIL
-http://www.smashingmagazine.com/2015/10/rail-user-centric-model-performance/
-https://aerotwist.com/blog/bigrig/
+### RAIL [RAIL in Smashing Magazine](http://www.smashingmagazine.com/2015/10/rail-user-centric-model-performance/)
+RAIL stands for response, animation, idle and load. These four distinct areas are a way to reason about the actions in your websites and apps. If you optimize based on each area’s performance goals (which we got from those perception thresholds), then your users will be very happy.
+
+* **R**esponse: if a user clicks on a button, you have to respond to their click before they notice any lag. This applies to any input, really, whether it’s toggling a form control or starting an animation. If it doesn’t happen in a reasonable window of time, then the connection between action and reaction breaks and the user will notice.
+* **A**nimation: animation is a pillar of modern apps, from scrolling to view transitions, and we must be judicious with what we do in this period of time, because the user will often be interacting directly and will really notice if the frame rate varies. However, the user expects very smooth feedback for more than what falls under the classic definition of animation.
+* **I**dle: creating apps that respond and animate well often requires deferment of work. The Optimistic UI patterns leverage this technique to great effect. All sorts of work that must be completed likely does not need to happen within a critical time window in the same way as “response” or “load”: Bootstrapping the comments functionality, initializing components, searching and sorting data, and beaconing back analytics data are all non-essential items that we can do when the browser is idle.
+* **L**oad: page-loading time is a well-trodden area of performance. We’re most interested in getting the user to the first meaningful paint quickly. Once that’s delivered, the app must remain responsive; the user mustn’t encounter trouble when scrolling, tapping or watching animations. This can be super-challenging, especially when much of the work for a page shares a single thread.
 
 ### FLIP
 https://aerotwist.com/blog/flip-your-animations/
