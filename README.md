@@ -71,5 +71,11 @@ RAIL stands for response, animation, idle and load. These four distinct areas ar
 * **I**dle: creating apps that respond and animate well often requires deferment of work. The Optimistic UI patterns leverage this technique to great effect. All sorts of work that must be completed likely does not need to happen within a critical time window in the same way as “response” or “load”: Bootstrapping the comments functionality, initializing components, searching and sorting data, and beaconing back analytics data are all non-essential items that we can do when the browser is idle.
 * **L**oad: page-loading time is a well-trodden area of performance. We’re most interested in getting the user to the first meaningful paint quickly. Once that’s delivered, the app must remain responsive; the user mustn’t encounter trouble when scrolling, tapping or watching animations. This can be super-challenging, especially when much of the work for a page shares a single thread.
 
-### FLIP
-https://aerotwist.com/blog/flip-your-animations/
+### FLIP [https://aerotwist.com/blog/flip-your-animations/](https://aerotwist.com/blog/flip-your-animations/)
+What FLIP tries to do is to turn animations on their head. Instead of animating “straight ahead” and potentially doing expensive calculations on every single frame, it precalculate the animation dynamically and let it play out cheaply.
+FLIP stands for First, Last, Invert, Play.
+
+* **First**: the initial state of the element(s) involved in the transition.
+* **Last**: the final state of the element(s).
+* **Invert**: here’s the fun bit. You figure out from the first and last how the element has changed, so – say – its width, height, opacity. Next you apply transforms and opacity changes to reverse, or invert, them. If the element has moved 90px down between First and Last, you would apply a transform of -90px in Y. This makes the elements appear as though they’re still in the First position but, crucially, they’re not.
+* **Play**: switch on transitions for any of the properties you changed, and then remove the inversion changes. Because the element or elements are in their final position removing the transforms and opacities will ease them from their faux First position, out to the Last position.
