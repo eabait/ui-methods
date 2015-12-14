@@ -50,8 +50,16 @@ There are two main principles of OOCSS:
 * **Separate structure and skin**: this means to define repeating visual features (like background and border styles) as separate “skins” that you can mix-and-match with your various objects to achieve a large amount of visual variety without much code. Separating structure and skin can also mean using classes to name your objects and their components, rather than relying solely on the semantics of HTML. For example, the media object is named with ```class="media"```, and its components are named with ```class="img"``` (for the image/video component) and ```class="bd"``` (for the body/text component). By referencing these classes in your stylesheets (say, rather than directly styling the ```<img>``` element), your HTML can be flexible. For instance, if a new media element were to take off in the next few years (e.g. ```<svg>```), it could be integrated into the HTML without having to touch the CSS.
 * **Separate container and content**: this means “rarely use location-dependent styles”. An object should look the same no matter where you put it. So instead of styling a specific ```<h2>``` with ```.myObject h2 {...}```, create and apply a class that describes the ```<h2>``` in question, like ```<h2 class="category">```. This gives you the assurance that: (1) all unclassed ```<h2>s``` will look the same; (2) all elements with the category class (called a mixin) will look the same; and 3) you won’t need to create an override style for the case when you actually do want ```.myObject h2``` to look like the normal ```<h2>```.
 
-### SMACSS
-https://smacss.com/
+### SMACSS [https://smacss.com/](https://smacss.com/)
+At the very core of SMACSS is categorization. By categorizing CSS rules, we begin to see patterns and can define better practices around each of these patterns. Much of the purpose of categorizing things is to codify patterns—things that repeat themselves within our design. Repetition results in less code, easier maintenance, and greater consistency in the user experience. These are all wins. Exceptions to the rule can be advantageous but they should be justified.
+
+There are five types of categories:
+
+* **Base**: base rules are the defaults. They are almost exclusively single element selectors but it could include attribute selectors, pseudo-class selectors, child selectors or sibling selectors. Essentially, a base style says that wherever this element is on the page, it should look like this.
+* **Layout**: layout rules divide the page into sections. Layouts hold one or more modules together.
+* **Module**: are the reusable, modular parts of our design. They are the callouts, the sidebar sections, the product lists and so on.
+* **State**: state rules are ways to describe how our modules or layouts will look when in a particular state. Is it hidden or expanded? Is it active or inactive? They are about describing how a module or layout looks on screens that are smaller or bigger. They are also about describing how a module might look in different views like the home page or the inside page.
+* **Theme**: theme rules are similar to state rules in that they describe how modules or layouts might look. Most sites don’t require a layer of theming but it is good to be aware of it.
 
 ### SUIT CSS
 http://suitcss.github.io/
