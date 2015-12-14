@@ -43,9 +43,12 @@ BEM main strength is to provide a common ground for naming CSS classes. Using pr
 * **Element**: parts of a block and have no standalone meaning. Any element is semantically tied to its block. Element names may consist of Latin letters, digits, dashes and underscores. CSS class is formed as block name plus two underscores plus element name: .block__elem
 * **Modifier**: flags on blocks or elements. Use them to change appearance, behavior or state. Modifier names may consist of Latin letters, digits, dashes and underscores. CSS class is formed as block’s or element’s name plus two dashes: .block--mod or .block__mod--mod and .block--color-black with .block--color-red. Spaces in complicated modifiers are replaced by dash.
 
-### OOCSS
-https://github.com/stubbornella/oocss
-http://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/
+### OOCSS [https://github.com/stubbornella/oocss/wiki](https://github.com/stubbornella/oocss/wiki)
+OOCSS intents to bring Object-Oriented principles to CSS development. Basically, a CSS “object” is a repeating visual pattern, that can be abstracted into an independent snippet of HTML, CSS, and possibly JavaScript. That object can then be reused throughout a site.
+
+There are two main principles of OOCSS:
+* **Separate structure and skin**: this means to define repeating visual features (like background and border styles) as separate “skins” that you can mix-and-match with your various objects to achieve a large amount of visual variety without much code. Separating structure and skin can also mean using classes to name your objects and their components, rather than relying solely on the semantics of HTML. For example, the media object is named with ```class="media"```, and its components are named with ```class="img"``` (for the image/video component) and ```class="bd"``` (for the body/text component). By referencing these classes in your stylesheets (say, rather than directly styling the ```<img>``` element), your HTML can be flexible. For instance, if a new media element were to take off in the next few years (e.g. ```<svg>```), it could be integrated into the HTML without having to touch the CSS.
+* **Separate container and content**: this means “rarely use location-dependent styles”. An object should look the same no matter where you put it. So instead of styling a specific ```<h2>``` with ```.myObject h2 {...}```, create and apply a class that describes the ```<h2>``` in question, like ```<h2 class="category">```. This gives you the assurance that: (1) all unclassed ```<h2>s``` will look the same; (2) all elements with the category class (called a mixin) will look the same; and 3) you won’t need to create an override style for the case when you actually do want ```.myObject h2``` to look like the normal ```<h2>```.
 
 ### SMACSS
 https://smacss.com/
